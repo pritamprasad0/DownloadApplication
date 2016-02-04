@@ -36,7 +36,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="HtmlAgilityPack">
-      <HintPath>References\HtmlAgilityPack\HtmlAgilityPack.dll</HintPath>
+      <HintPath>..\..\..\Visual Studio 2013\Projects\References\HtmlAgilityPack\HtmlAgilityPack.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
