@@ -16,7 +16,7 @@ namespace DownloadApp
         public static readonly WebClient Client = new WebClient();
 
         public static bool DownloadCompletedFlag;
-
+        
         public static void GetResults(string searchquery)
         {
             if (((MainWindow) Application.Current.MainWindow).WebsiteComboBox.Text == DownloadDataModel.Emp3Website)
@@ -118,7 +118,11 @@ namespace DownloadApp
             }
             if (name == string.Empty)
             {
-                name = Path.GetFileName(uri.AbsolutePath);
+                var tempsb = new StringBuilder();
+                tempsb.Append(DownloadDataModel.defaultDownloadPath);
+                tempsb.Append(@"\");
+                tempsb.Append(Path.GetFileName(uri.AbsolutePath));
+                name = tempsb.ToString();
             }
 
             ((MainWindow) Application.Current.MainWindow).FileNameLabel.Content = Path.GetFileName(name);
