@@ -4,14 +4,14 @@ BackLog:
 
 Only Added for 1st page, add for next pages if exist 
 Setting for default save path, default website engine
-Download Button if no row is seleced
+Message when download is stopped and MessageBox
 Download History in SQL Db
 Refactor code
 
 ================================================================================
 Ongoing:
 --------------------------------------------------------------------------------
-
+Download Button if no row is seleced Exception
 
 
 
