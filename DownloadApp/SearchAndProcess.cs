@@ -67,6 +67,11 @@ namespace DownloadApp
             var doc = html.DocumentNode;
             var divResultBox = doc.SelectSingleNode("//div[@id='results_box']");
             var songDivs = divResultBox.SelectNodes(".//div[@class='song_item']");
+            if (songDivs == null)
+            {
+                MessageBox.Show("File Not Found", "Not Found", MessageBoxButton.OK);
+                return;
+            }
             foreach (var songsDiv in songDivs)
             {
                 var linkDiv = songsDiv.SelectSingleNode(".//a[@class='btn' and @rel='nofollow']");

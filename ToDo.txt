@@ -3,17 +3,14 @@ BackLog:
 -------------------------------------------------------------------------------
 
 Only Added for 1st page, add for next pages if exist 
-Create Menu Bar
 Setting for default save path, default website engine
-Download Button if no row is selected
+Download Button if no row is seleced
 Download History in SQL Db
-
+Refactor code
 
 ================================================================================
 Ongoing:
 --------------------------------------------------------------------------------
-Create Menu Bar
-
 
 
 
@@ -30,6 +27,9 @@ New Window for Save file info -->savefiledialog
 OpenFile Location after downloading
 OpenFile for playing after downloading
 Add Stop Download
+Create Menu Bar
+File not found when no search results
+
 
 
 
