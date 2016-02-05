@@ -21,6 +21,11 @@ namespace DownloadApp
         private void DownloadButton_Click(object sender, RoutedEventArgs e)
         {
             var model = (DownloadDataModel) DownloadDataGrid.SelectedItem;
+            if (model == null)
+            {
+                MessageBox.Show("Select a Row from List", "Nothing to Download", MessageBoxButton.OK);
+                return;
+            }
             SearchAndProcess.DownloadSong(model.Url);
         }
 
