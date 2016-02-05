@@ -12,7 +12,7 @@ Download History in SQL Db
 ================================================================================
 Ongoing:
 --------------------------------------------------------------------------------
-
+Create Menu Bar
 
 
 
@@ -30,3 +30,39 @@ New Window for Save file info -->savefiledialog
 OpenFile Location after downloading
 OpenFile for playing after downloading
 Add Stop Download
+
+
+
+
+----------------------------------------------------------------------------------
+Menu Bar Design
+----------------------------------------------------------------------------------
+File
+    Exit
+Edit
+    UnDo
+    Redo
+    Copy
+    Paste
+    Find
+    FindAndReplace
+View
+    History
+Setting
+    Defaults
+        Download Location
+        Search Engine     
+Help
+    View Help
+    About Us
+    
+    
+
+
+
+
+
+
+
+
+
