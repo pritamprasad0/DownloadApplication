@@ -3,14 +3,15 @@ BackLog:
 -------------------------------------------------------------------------------
 
 Only Added for 1st page, add for next pages if exist 
-Download History in SQL Db
-Refactor code
-Add defaults entries to menu item
+Download History in XML
+**Refactor code
 Download if selected more than one links in datagrid
+Add Entries to Edit MenuItems
+Add Entries to History MenuItem
+Add Values to defaultEngine, default downloadLocation Menu Item
 ================================================================================
 Ongoing:
 --------------------------------------------------------------------------------
-#Bug: Download button click when nothing is being searched
 
 
 
@@ -31,6 +32,13 @@ File not found when no search results
 Exception for Download Button if no row is seleced
 Setting for default save path
 Settings for default website engine
+#Bug: Download button click when nothing is being searched
+
+
+
+
+IDEAS:
+====== app to get data from stock market
 
 
 

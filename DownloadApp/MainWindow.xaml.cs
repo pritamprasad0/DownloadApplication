@@ -74,5 +74,10 @@ namespace DownloadApp
                 MessageBox.Show("Download Stopped", "", MessageBoxButton.OK);
             }
         }
+
+        private void ExitMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }

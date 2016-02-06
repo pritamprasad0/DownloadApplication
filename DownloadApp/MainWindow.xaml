@@ -4,9 +4,9 @@
         Title="Downloader Application" Height="600" Width="800" Loaded="Window_Loaded">
 
     <Grid Background="AntiqueWhite">
-        <TextBox x:Name="DownloadTextBox" KeyUp="TextBox_KeyEnterUpdate" HorizontalAlignment="Left" Height="23" Margin="40,30,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="400" PreviewMouseDoubleClick="DownloadTextBox_PreviewMouseDoubleClick"/>
-        <Button x:Name="SearchButton" Content="Search" HorizontalAlignment="Left" Margin="620,30,0,0" VerticalAlignment="Top" Width="100" Click="SearchButton_Click"/>
-        <DataGrid x:Name="DownloadDataGrid" x:FieldModifier="public" IsReadOnly="True" ItemsSource="{Binding}" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="340"  Margin="40,75,0,0" VerticalAlignment="Top" Width="680" >
+        <TextBox x:Name="DownloadTextBox" KeyUp="TextBox_KeyEnterUpdate" HorizontalAlignment="Left" Height="23" Margin="40,50,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="400" PreviewMouseDoubleClick="DownloadTextBox_PreviewMouseDoubleClick"/>
+        <Button x:Name="SearchButton" Content="Search" HorizontalAlignment="Left" Margin="620,50,0,0" VerticalAlignment="Top" Width="100" Click="SearchButton_Click"/>
+        <DataGrid x:Name="DownloadDataGrid" x:FieldModifier="public" IsReadOnly="True" ItemsSource="{Binding}" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="340"  Margin="40,95,0,0" VerticalAlignment="Top" Width="680" >
             <DataGrid.Resources>
                 <Style TargetType="DataGridRow">
                     <EventSetter Event="MouseDoubleClick" Handler="Row_DoubleClick"></EventSetter>
@@ -18,44 +18,42 @@
                 <DataGridTextColumn x:Name="Column3" Header="File Size" Binding="{Binding FileSize}"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="DownloadButton" Content="Download" HorizontalAlignment="Left" Margin="620,433,0,0" VerticalAlignment="Top" Width="100" Click="DownloadButton_Click"/>
-        <ProgressBar x:Name="DownloadProgrssBar" x:FieldModifier="public" HorizontalAlignment="Left" Height="22" Margin="40,480,0,0" VerticalAlignment="Top" Width="560"/>
-        <Label x:Name="DownloadingFileLabel" x:FieldModifier="public" Content="Downloading File " HorizontalAlignment="Left" Margin="35,455,0,0" VerticalAlignment="Top" RenderTransformOrigin="-6,0.231"/>
-        <Label x:FieldModifier="public" x:Name="FileNameLabel" Content="" HorizontalAlignment="Left" Margin="131,455,0,0" VerticalAlignment="Top" RenderTransformOrigin="-6,0.231"/>
-        <ComboBox x:FieldModifier="public" x:Name="WebsiteComboBox" HorizontalAlignment="Left" Margin="457,30,0,0" VerticalAlignment="Top" Width="150"/>
-        <Button x:Name="StopDownloadButton" Content="Stop Download" HorizontalAlignment="Left" Margin="620,480,0,0" VerticalAlignment="Top" Width="100" Click="StopDownloadButton_Click"/>
-        <Menu HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="792">
-            <MenuItem Header="_File">
+        <Button x:Name="DownloadButton" Content="Download" HorizontalAlignment="Left" Margin="620,450,0,0" VerticalAlignment="Top" Width="100" Click="DownloadButton_Click"/>
+        <ProgressBar x:Name="DownloadProgrssBar" x:FieldModifier="public" HorizontalAlignment="Left" Height="22" Margin="40,500,0,0" VerticalAlignment="Top" Width="560"/>
+        <Label x:Name="DownloadingFileLabel" x:FieldModifier="public" Content="Downloading File " HorizontalAlignment="Left" Margin="35,475,0,0" VerticalAlignment="Top" RenderTransformOrigin="-6,0.231"/>
+        <Label x:FieldModifier="public" x:Name="FileNameLabel" Content="" HorizontalAlignment="Left" Margin="131,475,0,0" VerticalAlignment="Top" RenderTransformOrigin="-6,0.231"/>
+        <ComboBox x:FieldModifier="public" x:Name="WebsiteComboBox" HorizontalAlignment="Left" Margin="457,50,0,0" VerticalAlignment="Top" Width="150"/>
+        <Button x:Name="StopDownloadButton" Content="Stop Download" HorizontalAlignment="Left" Margin="620,500,0,0" VerticalAlignment="Top" Width="100" Click="StopDownloadButton_Click"/>
+        <Menu HorizontalAlignment="Left" Height="22" VerticalAlignment="Top" Width="792">
+            <MenuItem x:Name="FileMenuItem" Header="_File">
                 <MenuItem Header=""></MenuItem>
                 <Separator></Separator>
-                <MenuItem Header="E_xit"></MenuItem>
+                <MenuItem x:Name="ExitMenuItem" Header="E_xit" Click="ExitMenuItem_Click"></MenuItem>
             </MenuItem>
-            <MenuItem Header="_Edit">
-                <MenuItem Header="_Redo"></MenuItem>
-                <MenuItem Header="_Undo"></MenuItem>
+            <MenuItem x:Name="EditMenuItem" Header="_Edit">
+                <MenuItem x:Name="RedoMenuItem" Header="_Redo"></MenuItem>
+                <MenuItem x:Name="UndoMenuItem" Header="_Undo"></MenuItem>
                 <Separator></Separator>
-                <MenuItem Header="_Copy"></MenuItem>
-                <MenuItem Header="_Paste"></MenuItem>
+                <MenuItem x:Name="CopyMenuItem" Header="_Copy"></MenuItem>
+                <MenuItem x:Name="PasteMenuItem" Header="_Paste"></MenuItem>
                 <Separator></Separator>
-                <MenuItem Header="Find"></MenuItem>
-                <MenuItem Header="Find And Replace"></MenuItem>
+                <MenuItem x:Name="MenuItem" Header="Find"></MenuItem>
+                <MenuItem x:Name="FandRMenuItem" Header="Find And Replace"></MenuItem>
             </MenuItem>
-            <MenuItem Header="_View">
-                <MenuItem Header="Histor_y"></MenuItem>
+            <MenuItem x:Name="ViewMenuItem" Header="_View">
+                <MenuItem x:Name="HistoryMenuItem" Header="Histor_y"></MenuItem>
             </MenuItem>
-            <MenuItem Header="_Settings">
+            <MenuItem x:Name="SettingsMenuItem" Header="_Settings">
                 <MenuItem Header="Set _Defaults">
-                    <MenuItem Header="Download _Location"></MenuItem>
-                    <MenuItem Header="Search En_gine"></MenuItem>
+                    <MenuItem x:Name="SetDefaultDownloadLocationMenuItem" Header="Download _Location"></MenuItem>
+                    <MenuItem x:Name="SetDefaultSearchEngineMenuItem" Header="Search En_gine" ></MenuItem>
                 </MenuItem>
                 <MenuItem Header="  "></MenuItem>
             </MenuItem>
             <MenuItem Header="_Help">
-                <MenuItem Header="View Help"></MenuItem>
-                <MenuItem Header="_AboutUs"></MenuItem>
+                <MenuItem x:Name="ViewHelpMenuItem" Header="View Help"></MenuItem>
+                <MenuItem x:Name="AboutUsMenuItem" Header="_AboutUs"></MenuItem>
             </MenuItem>
         </Menu>
-
-
     </Grid>
 </Window>
