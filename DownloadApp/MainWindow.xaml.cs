@@ -23,7 +23,9 @@ namespace DownloadApp
             var model = (DownloadDataModel) DownloadDataGrid.SelectedItem;
             if (model == null)
             {
-                MessageBox.Show("Select a Row from List", "Nothing to Download", MessageBoxButton.OK);
+                MessageBox.Show(
+                    DownloadDataGrid.Items.Count != 0 ? "Select a Row from List" : "Please Search for Something first",
+                    "Nothing to Download", MessageBoxButton.OK);
                 return;
             }
             SearchAndProcess.DownloadSong(model.Url);
