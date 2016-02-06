@@ -4,6 +4,7 @@ using System.IO;
 using System.Net;
 using System.Text;
 using System.Windows;
+using System.Windows.Input;
 using HtmlAgilityPack;
 using Microsoft.Win32;
 
@@ -19,14 +20,12 @@ namespace DownloadApp
         
         public static void GetResults(string searchquery)
         {
-            if (((MainWindow) Application.Current.MainWindow).WebsiteComboBox.Text == DownloadDataModel.Emp3Website)
+            switch (((MainWindow) Application.Current.MainWindow).WebsiteComboBox.Text)
             {
-                DownloadFromemp3World(searchquery);
-            }
-            else if (((MainWindow) Application.Current.MainWindow).WebsiteComboBox.Text ==
-                     DownloadDataModel.Mp3skullWebsite)
-            {
-                DownloadFromMp3Skull(searchquery);
+                case "Emp3world" : DownloadFromMp3World(searchquery);
+                    break;
+                case "Mp3Skull" : DownloadFromMp3Skull(searchquery);
+                    break;
             }
         }
 
@@ -34,12 +33,12 @@ namespace DownloadApp
         {
         }
 
-        private static void DownloadFromemp3World(string searchquery)
+        private static void DownloadFromMp3World(string searchquery)
         {
             ((MainWindow) Application.Current.MainWindow).DownloadDataGrid.Items.Clear();
             var resultsBuffer = new byte[8192];
             var searchString = new StringBuilder();
-            searchString.Append("http://emp3world.biz/search/");
+            searchString.Append(DownloadDataModel.Emp3Website);
             searchString.Append(searchquery.Trim().Replace(" ", "_"));
             searchString.Append("_mp3_download.html");
 

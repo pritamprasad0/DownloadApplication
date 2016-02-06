@@ -37,7 +37,7 @@ namespace DownloadApp
 
         private void AddDataToListBox()
         {
-            WebsiteComboBox.Items.Add("emp3world");
+            WebsiteComboBox.Items.Add("Emp3world");
             WebsiteComboBox.Items.Add("Mp3Skull");
             WebsiteComboBox.Items.Add("Temp");
             WebsiteComboBox.SelectedIndex = 0;
