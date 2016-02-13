@@ -11,6 +11,12 @@ namespace DownloadApp
         public MainWindow()
         {
             InitializeComponent();
+            PreprocessingInitialization();
+        }
+
+        private void PreprocessingInitialization()
+        {
+            //this.ActiveControl = 
         }
 
         private void SearchButton_Click(object sender, RoutedEventArgs e)
@@ -79,5 +85,6 @@ namespace DownloadApp
         {
             Close();
         }
+
     }
 }
