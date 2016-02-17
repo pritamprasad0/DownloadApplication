@@ -29,11 +29,13 @@ namespace DownloadApp
         private void OpenFileLocButton_Click(object sender, RoutedEventArgs e)
         {
             Process.Start(Directory.GetParent(_filepath).FullName);
+            Close();
         }
 
         private void PlayButton_Click(object sender, RoutedEventArgs e)
         {
             Process.Start("wmplayer.exe", _filepath);
+            Close();
         }
     }
 }
